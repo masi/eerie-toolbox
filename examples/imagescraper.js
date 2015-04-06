@@ -1,8 +1,12 @@
+
+var fs = require('fs');
 var webpage = require('../webpage.js').create();
 var PageWalker = require('../lib/pagewalker.js');
 var ImageScraper = require('../lib/imagescraper.js');
 
-phantomJsOrg = new ImageScraper(new PageWalker(webpage));
+fs.makeDirectory('imagescraper-images');
+
+phantomJsOrg = new ImageScraper(new PageWalker(webpage), 'imagescraper-images');
 console.log('SCRAPING...');
 phantomJsOrg.processQueue(
 	[
