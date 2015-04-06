@@ -19,4 +19,4 @@ phantomJsOrg.processQueue(
 		console.log('DONE');
 		phantom.exit()
 	}
-)
+);

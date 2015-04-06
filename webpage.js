@@ -14,4 +14,4 @@ module.exports = {
 	create: function() {
 		return factory.create();
 	}
-}
+};
