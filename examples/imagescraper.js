@@ -1,4 +1,3 @@
-
 var fs = require('fs');
 var webpage = require('../webpage.js').create();
 var PageWalker = require('../lib/pagewalker.js');
@@ -15,8 +14,15 @@ phantomJsOrg.processQueue(
 		{ url: 'http://phantomjs.org/faq.html', selectors: ['.link-release'] },
 		{ url: 'http://phantomjs.org/examples/', selectors: [] }
 	],
-	function () {
+	function (context) {
 		console.log('DONE');
-		phantom.exit()
+		phantom.exit();
+	},
+	function (item, error, context) {
+		console.log('LOAD ERROR: ' + item.url);
+	},
+	function (item, error, context) {
+		console.log('ERROR: ' + error.message);
+		phantom.exit(1);
 	}
 );
