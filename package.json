@@ -1,0 +1,29 @@
+{
+	"name": "eerie-toolbox",
+	"version": "0.0.1",
+	"description": "A utility library for PhantomJS and SlimerJS",
+	"keywords": [
+		"phantomjs",
+		"slimerjs",
+		"library",
+		"utility",
+		"tool"
+	],
+	"author": {
+		"name": "Martin Kutschker",
+		"email": "mkutschker-phantomjs@yahoo.com"
+	},
+	"homepage": "https://github.com/masi/eerie-toolbox",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/masi/eerie-toolbox.git"
+	},
+	"bugs": {
+		"url": "https://github.com/masi/eerie-toolbox/issues"
+	},
+	"engines": {
+		"phantomjs": "*",
+		"slimerjs": "*"
+	}
+}
